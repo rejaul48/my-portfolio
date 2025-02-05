@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaAnglesLeft } from "react-icons/fa6";
-import aboutMeImg from '../../assets/about-me-img.jpg'
 import { IoNotificationsCircleOutline } from "react-icons/io5";
+// this image not nedded right now
+// import aboutMeImg from '../../assets/about-me-img.jpg'
 
 const AboutMePage = () => {
   return (
