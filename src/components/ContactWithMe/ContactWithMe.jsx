@@ -43,7 +43,7 @@ const ContactWithMe = () => {
     return (
         <>
 
-            <section className=' p-4 md:p-12'>
+            <section className='p-4 md:p-12'>
 
                 <div className='max-w-6xl mx-auto'>
                     <div className='md:flex md:gap-6 justify-between bg-[#05345C] bg-opacity-70 text-white p-6 md:p-12 rounded-xl'>

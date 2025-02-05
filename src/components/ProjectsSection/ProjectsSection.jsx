@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -12,25 +13,38 @@ const projects = [
         title: "TutorTrack Solution",
         image: "https://i.imgur.com/jAGRbYW.png/300x200",
         demoLink: "https://tutortrack-48.web.app",
+        repoLink: "https://github.com/rejaul48/TutorTrack-client-side"
     },
     {
-        id: 2,
-        title: "ProGear Sports",
-        image: "https://i.imgur.com/c5sqvSw.png/300x200",
-        demoLink: "https://progearsports-48.web.app",
+        id: 5,
+        title: "TeamFlow Website",
+        image: "https://i.imgur.com/QhEwLIR.png/300x200",
+        demoLink: "https://team-flow-48.web.app",
+        repoLink: "https://github.com/rejaul48/TeamFlow-client-side"
     },
+
     {
         id: 3,
         title: "Carear Campus",
         image: "https://i.imgur.com/qBbx8bt.png/300x200",
         demoLink: "https://career-campus-48.web.app",
+        repoLink: "https://github.com/rejaul48/Career-Campus"
     },
     {
         id: 4,
         title: "Portfolio Website",
         image: "https://i.imgur.com/YZ2yrnR.png/300x200",
         demoLink: "https://rejaul-islam-48.web.app",
+        repoLink: "https://github.com/rejaul48/my-portfolio"
     },
+    {
+        id: 2,
+        title: "ProGear Sports",
+        image: "https://i.imgur.com/c5sqvSw.png/300x200",
+        demoLink: "https://progearsports-48.web.app",
+        repoLink: "https://github.com/rejaul48/progear-client-side"
+    }
+
 ];
 
 const ProjectCard = ({ project }) => {
@@ -64,10 +78,10 @@ const ProjectCard = ({ project }) => {
                 <h3 className="text-lg font-bold text-white text-opacity-75">{project.title}</h3>
                 {/* Details Button */}
                 <div className="mt-auto"> {/* This pushes the button to the bottom */}
-                    <button className="flex items-center gap-4 text-sm font-semibold uppercase bg-[#0788FF] py-2 px-4 rounded-full text-white hover:delay-100 hover:bg-black hover:bg-opacity-60 transition-colors duration-200">
+                    <Link to={project?.repoLink} target="_blank" className="flex items-center gap-4 text-sm font-semibold uppercase bg-[#0788FF] py-2 px-4 rounded-full text-white hover:delay-100 hover:bg-black hover:bg-opacity-60 transition-colors duration-200">
                         Details
                         <FaArrowRight />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -86,6 +100,8 @@ const ProjectsSection = () => {
                 </h2>
                 {/* Swiper Slider */}
                 <Swiper
+                    modules={[Autoplay, Pagination]}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
                     spaceBetween={20}
                     slidesPerView={1}
                     pagination={{ clickable: true }}

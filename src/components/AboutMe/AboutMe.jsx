@@ -37,7 +37,7 @@ const AboutMe = () => {
                             <h2 className='uppercase text-2xl md:text-3xl lg:text-5xl font-bold text-blue-700 my-3'>ui design</h2>
                             <h2 className='uppercase text-2xl md:text-3xl lg:text-5xl font-bold text-white text-opacity-80'>design projects</h2>
 
-                            <p className='text-[16px] my-6 text-white text-opacity-85'>I am a passionate front-end web developer dedicated to crafting responsive, user-friendly websites. With expertise in HTML, CSS, JavaScript, and modern frameworks like React, I create engaging digital experiences. Focused on clean design, performance, and accessibility, I constantly learn and adapt to evolving technologies to deliver exceptional solutions that bring ideas to life. <br /> <Link className='flex items-center gap-3 mt-2 underline text-blue-500'>See more about me <FaArrowRight className='text-xs'></FaArrowRight> </Link></p>
+                            <p className='text-[16px] my-6 text-white text-opacity-85'>I am a passionate front-end web developer dedicated to crafting responsive, user-friendly websites. With expertise in HTML, CSS, JavaScript, and modern frameworks like React, I create engaging digital experiences. Focused on clean design, performance, and accessibility, I constantly learn and adapt to evolving technologies to deliver exceptional solutions that bring ideas to life. <br /> <Link to={'/about-me'} className='flex items-center gap-3 mt-2 underline text-blue-500'>See more about me <FaArrowRight className='text-xs'></FaArrowRight> </Link></p>
 
                             {/* some another experience */}
                             <div className='flex gap-3'>
@@ -50,7 +50,7 @@ const AboutMe = () => {
                                     <p className='text-sm text-white mt-2'>Years Coding Journy</p>
                                 </div>
                             </div>
-
+{/* 
                             <div className='mt-5'>
                                 <button onClick={() => { { handleGetInTouch() } }} className='flex items-center
                                                          gap-4 text-lg font-semibold uppercase 
@@ -59,7 +59,7 @@ const AboutMe = () => {
                                                             hover:bg-black hover:bg-opacity-60  
                                                             transition-colors duration-200
                                                          '>GET IN TOUCH<FaArrowRight ></FaArrowRight></button>
-                            </div>
+                            </div> */}
 
 
 
