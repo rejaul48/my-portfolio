@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect } from 'react';
 import { Link, Element } from 'react-scroll';
 import logoImg from '../../assets/my-web-logo.png';
@@ -155,7 +154,7 @@ const Home = () => {
       <Element
         name="section1"
         id="section1"
-        className='bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e]'
+        className='bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e] overflow-hidden'
 
       >
         <Hero ></Hero>
@@ -163,7 +162,7 @@ const Home = () => {
       <Element
         name="section2"
         id="section2"
-        className='bg-gradient-to-r from-[#304150] to-[#040E18]'
+        className='bg-gradient-to-r from-[#304150] to-[#040E18] overflow-hidden'
 
       >
         <AboutMe ></AboutMe>
@@ -171,7 +170,7 @@ const Home = () => {
       <Element
         name="section3"
         id="section3"
-        className='bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e]'
+        className='bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e] overflow-hidden'
 
       >
         <SkillsSection ></SkillsSection>
@@ -180,7 +179,7 @@ const Home = () => {
       <Element
         name="section4"
         id="section4"
-        className='bg-gradient-to-r from-[#304150] to-[#040E18]'
+        className='bg-gradient-to-r from-[#304150] to-[#040E18] overflow-hidden'
 
       >
         <ProjectsSection ></ProjectsSection>
@@ -189,14 +188,14 @@ const Home = () => {
       <Element
         name="section5"
         id="section5"
-        className='bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e]'
+        className='bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e] overflow-hidden'
 
       >
         <ContactWithMe ></ContactWithMe>
       </Element>
 
 
-      <div className='bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e]'>
+      <div className='bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e] overflow-hidden'>
 
         <Footer ></Footer>
       </div>

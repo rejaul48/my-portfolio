@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -6,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const projects = [
     {
@@ -57,7 +59,7 @@ const ProjectCard = ({ project }) => {
             onMouseLeave={() => setHovered(false)}
         >
             {/* Image */}
-            <div className="h-64 overflow-hidden  relative flex-shrink-0">
+            <div className="h-64 overflow-hidden relative flex-shrink-0">
                 <img
                     src={project.image}
                     alt={project.title}
@@ -90,7 +92,13 @@ const ProjectCard = ({ project }) => {
 
 const ProjectsSection = () => {
     return (
-        <section className="py-12">
+        <motion.section
+            className="py-12"
+            initial={{ opacity: 0, y: 50 }}  
+            whileInView={{ opacity: 1, y: 0 }}   
+            viewport={{ once: false, amount: 0.2 }}    
+            transition={{ duration: 0.8 }}   
+        >
             <div className="max-w-6xl mx-auto px-6">
                 <h3 className='
                             tracking-widest
@@ -99,34 +107,36 @@ const ProjectsSection = () => {
                     Recent Projects
                 </h2>
                 {/* Swiper Slider */}
-                <Swiper
-                    modules={[Autoplay, Pagination]}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
-                    spaceBetween={20}
-                    slidesPerView={1}
-                    pagination={{ clickable: true }}
-                    breakpoints={{
-                        640: { slidesPerView: 1 },
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 },
-                    }}
-                    className="py-8"
-                    onSlideChange={(swiper) => {
-                        const pagination = swiper.pagination.el;
-                        const activeButton = pagination.querySelector(".swiper-pagination-bullet-active");
-                        if (activeButton) {
-                            activeButton.classList.add("bg-blue-500");
-                        }
-                    }}
-                >
-                    {projects.map((project) => (
-                        <SwiperSlide key={project.id}>
-                            <ProjectCard project={project} />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                <div>
+                    <Swiper
+                        modules={[Autoplay, Pagination]}
+                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        pagination={{ clickable: true }}
+                        breakpoints={{
+                            640: { slidesPerView: 1 },
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 },
+                        }}
+                        className="py-8"
+                        onSlideChange={(swiper) => {
+                            const pagination = swiper.pagination.el;
+                            const activeButton = pagination.querySelector(".swiper-pagination-bullet-active");
+                            if (activeButton) {
+                                activeButton.classList.add("bg-blue-500");
+                            }
+                        }}
+                    >
+                        {projects.map((project) => (
+                            <SwiperSlide key={project.id}>
+                                <ProjectCard project={project} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 
