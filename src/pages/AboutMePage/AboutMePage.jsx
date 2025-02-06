@@ -9,7 +9,7 @@ const AboutMePage = () => {
   return (
     <>
 
-      <main className='w-full bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e] px-4 xl:px-0'>
+      <main className='w-full bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e] px-4 xl:px-0 min-h-screen'>
         <section className='max-w-[1460px] mx-auto'>
           {/* back to home */}
           <div className='pt-4 sticky top-0 left-0 ml-4'>
@@ -41,13 +41,40 @@ const AboutMePage = () => {
               <div className='text-white mt-5'>
                 <h2 className='text-4xl font-bold tracking-wider'>🚀 About me: </h2>
                 <p className='mt-5 tracking-wide leading-6'></p>
-                <p>I'm a passionate and dedicated Frontend Web Developer currently pursuing my diploma in Computer Science and Technology at Dinajpur Polytechnic Institute. My coding journey began in 2021 with HTML, and since then, I've been on a mission to become a skilled and impactful developer.<br /><br />
-
-                  Over the past two years, I've explored various resources and technologies to deepen my understanding of web development. While the journey hasn't always been easy, it has taught me the importance of persistence and continuous learning. Recently, I've been focusing on mastering the MERN stack (MongoDB, Express.js, React, and Node.js) through the Programming Hero platform, which has helped me build a strong foundation in modern web development. <br /><br />
-
-                  My goal is to complete my higher studies in Computer Science and further enhance my skills in cutting-edge technologies. I'm committed to growing as a developer, creating user-friendly and innovative web solutions, and proving myself as a valuable contributor in the tech industry. When I'm not coding, I enjoy exploring new technologies, solving problems, and staying updated with the latest trends in web development.
-
+                <p>
+                  Hello! I'm Rejaul Islam, a passionate and dedicated Frontend Web Developer currently pursuing my diploma in Computer Science and Technology at Dinajpur Polytechnic Institute. My programming journey began in 2021 with HTML, and since then, I've been focused on developed my skills and building a strong foundation in web development.<br /><br />
                 </p>
+
+                <p><strong>My Programming Journey</strong><br />
+                  Over the past few years, I have explored a variety of resources and technologies, which have allowed me to develop a deeper understanding of both front-end and back-end web development. While the journey has presented its challenges, it has taught me the value of persistence and continuous learning. Currently, I am sharpening my expertise in the MERN stack (MongoDB, Express.js, React, and Node.js) through the Programming Hero platform, which has been important in expanding my knowledge of modern web development practices.<br /><br />
+                </p>
+
+                <p><strong>The Type of Work I Enjoy</strong><br />
+                  I enjoy working on projects that require creativity and problem-solving. Front-end development excites me because I get to build user-friendly, visually appealing interfaces that provide great user experiences. I am also passionate about back-end development, where I can create efficient and scalable systems that power the front end. I thrive in an environment where I can contribute ideas, collaborate with others, and work on projects that have a real impact.<br /><br />
+                </p>
+
+                <p><strong>Hobbies Outside Programming</strong><br />
+                  Outside of programming, I love to write poems and read historical books. I also enjoy keeping myself updated with international affairs and political movements, both in my country and around the world.<br /><br />
+                </p>
+
+
+                <p><strong>I'm Focusing On</strong><br />
+                  My professional goal is to complete my higher studies in Computer Science and continue to grow my skill set in cutting-edge technologies. I am passionate about creating user-friendly, innovative web solutions and contributing meaningfully to the tech community. Beyond programming, I enjoy exploring new technologies, solving problems, and staying updated with the latest trends in the ever-evolving world of web development.<br /><br />
+                </p>
+
+                <p><strong>My Personality</strong></p>
+                <p>🚀 <strong>Curious Learner</strong> - I love exploring new technologies and ideas.</p>
+                <p>🧩 <strong>Problem Solver</strong> - I enjoy solving challenges with creative solutions.</p>
+                <p>🤝 <strong>Team Player</strong> - I like working with others and sharing knowledge.</p>
+                <p>💡 <strong>Creative Thinker</strong> - I write poems and enjoy expressing ideas.</p>
+                <p>📖 <strong>History Enthusiast</strong> - I love reading historical books.</p>
+                <p>🌍 <strong>Global Minded</strong> - I stay updated on international affairs and politics.</p>
+                <p>🔥 <strong>Passionate Developer</strong> - I am dedicated to improving my coding skills.</p>
+
+
+
+
+
               </div>
 
               {/* tech Stack and Expertise */}

@@ -46,7 +46,8 @@ const AboutMe = () => {
                             </h2>
 
                             <p className='text-[16px] my-6 text-white text-opacity-85'>
-                                I am a passionate front-end web developer dedicated to crafting responsive, user-friendly websites. With expertise in HTML, CSS, JavaScript, and modern frameworks like React, I create engaging digital experiences. Focused on clean design, performance, and accessibility, I constantly learn and adapt to evolving technologies to deliver exceptional solutions that bring ideas to life.
+                            Hello! I'm Rejaul Islam, a passionate and dedicated Frontend Web Developer currently pursuing my diploma in Computer Science and Technology at Dinajpur Polytechnic Institute. My programming journey began in 2021 with HTML, and since then, I've been focused on developed my skills and building a strong foundation in web development.
+
                                 <br />
                                 <Link to={'/about-me'} className='flex items-center gap-3 mt-2 underline text-blue-500'>
                                     See more about me <FaArrowRight className='text-xs' />

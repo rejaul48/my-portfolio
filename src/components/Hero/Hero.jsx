@@ -38,11 +38,11 @@ const Hero = () => {
                         <h1 className='text-3xl lg:text-6xl uppercase font-bold my-3 text-white text-opacity-80'>
                             hey! i'm Rejaul
                         </h1>
-                        <h1 className='text-3xl lg:text-6xl font-bold uppercase my-7 text-blue-600'>
+                        <h1 className='text-xl lg:text-3xl font-bold uppercase my-7 text-blue-600'>
                             I'm a{' '}
                             <span className='px-5'>
                                 <TypeAnimation
-                                    sequence={['DESIGNER', 1000, 'DEVELOPER', 1000]}
+                                    sequence={['DESIGNER', 1000, ,'JUNIOR DEVELOPER', 1000,'FRONT-END DEVELOPER', 1000]}
                                     wrapper="span"
                                     speed={50}
                                     className='nd:text-6xl'
