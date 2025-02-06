@@ -61,7 +61,7 @@ const AboutMe = () => {
                                     <p className='text-sm text-white mt-2'>Technology Knowledge</p>
                                 </div>
                                 <div className='text-center border-[1px] border-[#041A30] rounded-md py-5 px-3 bg-white/5 backdrop-blur-md border-white/50'>
-                                    <h2 className='text-4xl lg:text-6xl font-bold text-white text-opacity-75'>2+</h2>
+                                    <h2 className='text-4xl lg:text-6xl font-bold text-white text-opacity-75'>3+</h2>
                                     <p className='text-sm text-white mt-2'>Years Coding Journey</p>
                                 </div>
                             </div>
