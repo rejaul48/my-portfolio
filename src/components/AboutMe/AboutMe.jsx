@@ -17,7 +17,7 @@ const AboutMe = () => {
     return (
         <>
             <section className='overflow-hidden'>
-                <div className='max-w-6xl mx-auto py-20 overflow-hidden'>
+                <div className='container mx-auto py-20 overflow-hidden'>
                     <div className='pb-12'>
                         <h2 className='text-center text-4xl font-bold text-white'>ABOU<span className='text-blue-300 border-b-4'>T ME</span></h2>
                     </div>

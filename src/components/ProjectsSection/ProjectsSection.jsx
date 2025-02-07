@@ -213,7 +213,7 @@ const ProjectsSection = () => {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8 }}
         >
-            <div className="max-w-6xl mx-auto px-6">
+            <div className="container mx-auto px-6">
                 <h3 className='
                             tracking-widest
                             bg-[#063560] w-fit text-white uppercase px-2 py-1 rounded-sm text-lg font-semibold'>MY WORK</h3>
@@ -245,78 +245,90 @@ const ProjectsSection = () => {
             </div>
 
             {selectedProject && (
-                <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md flex justify-center items-center z-50 pointer-events-auto px-4 xl:px-0 overflow-y-scroll  
-                 min-h-screen  
+                <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md flex justify-center items-center z-50 pointer-events-auto px-4 xl:px-0  
                 ">
-                    <div className="bg-white p-6 rounded-sm max-w-4xl w-full absolute z-60 top-4 
-                  px-8 xl:px-0
+                    <div className="bg-white p-6 rounded-sm max-w-4xl w-full absolute z-60 top-4 justify-center items-center h-full lg:max-h-[96vh]  
+                  px-8  
                     ">
-                        {/* Close Button */}
-                        <button
-                            onClick={closeModal}
-                            className="absolute top-4 right-4 text-gray-700 hover:text-red-500 text-lg"
-                        >
-                            <FaTimes />
-                        </button>
+                        {/*  close button */}
+                        <div className="header_and_close_button">
+                            {/* Close Button */}
+                            <button
+                                onClick={closeModal}
+                                className="absolute top-2 right-4 text-white bg-red-500 rounded-full hover:text-gray-500 text-3xl  "
+                            >
+                                <FaTimes />
+                            </button>
 
-                        {/* Modal Content */}
-                        <h2 className="text-xl font-bold mb-3">{selectedProject.title}</h2>
-                        <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-40 md:h-80 object-cover rounded-md mb-3" />
 
-                        <div className="mt-7">
-                            <h2 class="text-2xl font-semibold mb-2"><i class="fas fa-info-circle"></i> Brief Description</h2>
-                            <p>{selectedProject?.description}</p>
                         </div>
 
-                        <div className="mt-7">
-                            <h2 className="text-2xl font-semibold mb-2">
-                                <i className="fas fa-cogs"></i> Main Technology Stack Used
-                            </h2>
-                            <ul className="list-inside list-disc">
-                                {
-                                    selectedProject?.technologies?.map((tech, ind) => (
-                                        <li key={ind}>
-                                            <i className="fas fa-arrow-right"></i> {tech}
-                                        </li>
-                                    ))
-                                }
-                            </ul>
+                        {/* project description */}
+                        <div className=" overflow-y-scroll max-h-[90vh] pb-12 ">
+                            {/* project name */}
+                            <h2 className="text-xl font-bold mb-3">{selectedProject.title}</h2>
+                            {/* project image */}
+                            <div>
+                                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-40 md:h-80 object-cover rounded-md mb-3" />
+                            </div>
+
+                            <div className="mt-7">
+                                <h2 class="text-2xl font-semibold mb-2"><i class="fas fa-info-circle"></i> Brief Description</h2>
+                                <p>{selectedProject?.description}</p>
+                            </div>
+
+                            <div className="mt-7">
+                                <h2 className="text-2xl font-semibold mb-2">
+                                    <i className="fas fa-cogs"></i> Main Technology Stack Used
+                                </h2>
+                                <ul className="list-inside list-disc">
+                                    {
+                                        selectedProject?.technologies?.map((tech, ind) => (
+                                            <li key={ind}>
+                                                <i className="fas fa-arrow-right"></i> {tech}
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+
+
+                            <div className="mt-7">
+                                <h2 class="text-2xl font-semibold mb-2"><i class="fas fa-exclamation-circle"></i> Challenges Faced While Developing the Project</h2>
+                                <ul class="list-inside list-disc">
+                                    {
+                                        selectedProject?.challenges?.map((che, ind) => (
+                                            <li key={ind}>
+                                                {che}
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+
+                            <div className="mt-7 pb-7">
+                                <h2 class="text-2xl font-semibold mb-2"><i class="fas fa-lightbulb"></i> Potential Improvements and Future Plans</h2>
+                                <ul class="list-inside list-disc">
+                                    {
+                                        selectedProject?.improvements?.map((improve, ind) => (
+                                            <li key={ind}>
+                                                {
+                                                    improve
+                                                }
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+
+
+                            <div className="flex gap-4">
+                                <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer" className="bg-[#0788FF] text-white px-4 py-2 rounded-md">Live Demo</a>
+                                <a href={selectedProject.repoLink} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-4 py-2 rounded-md">GitHub Repo</a>
+                            </div>
                         </div>
 
 
-                        <div className="mt-7">
-                            <h2 class="text-2xl font-semibold mb-2"><i class="fas fa-exclamation-circle"></i> Challenges Faced While Developing the Project</h2>
-                            <ul class="list-inside list-disc">
-                                {
-                                    selectedProject?.challenges?.map((che, ind) => (
-                                        <li key={ind}>
-                                            {che}
-                                        </li>
-                                    ))
-                                }
-                            </ul>
-                        </div>
-
-                        <div className="mt-7 pb-7">
-                            <h2 class="text-2xl font-semibold mb-2"><i class="fas fa-lightbulb"></i> Potential Improvements and Future Plans</h2>
-                            <ul class="list-inside list-disc">
-                                {
-                                    selectedProject?.improvements?.map((improve, ind) => (
-                                        <li key={ind}>
-                                            {
-                                                improve
-                                            }
-                                        </li>
-                                    ))
-                                }
-                            </ul>
-                        </div>
-
-
-                        <div className="flex gap-4">
-                            <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer" className="bg-[#0788FF] text-white px-4 py-2 rounded-md">Live Demo</a>
-                            <a href={selectedProject.repoLink} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-4 py-2 rounded-md">GitHub Repo</a>
-                        </div>
                     </div>
                 </div>
             )}

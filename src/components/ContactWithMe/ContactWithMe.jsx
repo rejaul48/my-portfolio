@@ -5,6 +5,7 @@ import { FaFacebookF, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
+import { Tooltip } from "react-tooltip";
 
 const ContactWithMe = () => {
     const form = useRef();
@@ -44,11 +45,11 @@ const ContactWithMe = () => {
             viewport={{ once: false, amount: 0.2 }} // Triggers every time it's in view
             transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
         >
-            <div className='max-w-6xl mx-auto'>
+            <div className='container mx-auto'>
                 <div className='md:flex md:gap-6 justify-between bg-[#05345C] bg-opacity-70 text-white p-6 md:p-12 rounded-xl'>
 
                     {/* Contact Info */}
-                    <motion.div 
+                    <motion.div
                         className="contact_path"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -62,26 +63,45 @@ const ContactWithMe = () => {
 
                         {/* Social Links */}
                         <ul className='flex items-center gap-2 mt-14'>
-                            <li className='bg-[#0788FF] w-fit p-2 rounded-full border-2 border-white'>
-                                <Link to={'https://facebook.com/rejaulislam48'} target='_blank'>
-                                    <FaFacebookF className='text-2xl text-white'></FaFacebookF>
+            
+                            <li className='bg-[#0788FF] w-fit p-2 rounded-full border-2 border-white relative'>
+                                {/* Facebook Link with Tooltip */}
+                                <Link
+                                    to={'https://facebook.com/rejaulislam48'}
+                                    target='_blank'
+                                    data-tooltip-id="facebook-tooltip"
+                                    data-tooltip-content="Visit my Facebook profile">
+                                    <FaFacebookF className='text-2xl text-white' />
                                 </Link>
+
+                                {/* Tooltip Component */}
+                                <Tooltip id="facebook-tooltip" place="top" effect="solid" />
                             </li>
                             <li className='bg-pink-400 w-fit p-2 rounded-full border-2 border-white'>
-                                <Link to={'https://github.com/rejaul48'} target='_blank'>
+                                <Link to={'https://github.com/rejaul48'} target='_blank'
+                                    data-tooltip-id="github-tooltip"
+                                    data-tooltip-content="Visit my Github Profile"
+                                >
                                     <FaGithub className='text-2xl text-white'></FaGithub>
                                 </Link>
+
+                                <Tooltip id="github-tooltip" place="top" effect="solid" />
+
                             </li>
                             <li className='bg-[#0788FF] w-fit p-2 rounded-full border-2 border-white'>
-                                <Link to={'https://www.linkedin.com/in/rejaulislam48'} target='_blank'>
+                                <Link to={'https://www.linkedin.com/in/rejaulislam48'} target='_blank'
+                                    data-tooltip-id="linkedin-tooltip"
+                                    data-tooltip-content="Visit my Linkedin Profile"
+                                >
                                     <FaLinkedinIn className='text-2xl text-white'></FaLinkedinIn>
                                 </Link>
+                                <Tooltip id="linkedin-tooltip" place="top" effect="solid" />
                             </li>
                         </ul>
                     </motion.div>
 
                     {/* Contact Form */}
-                    <motion.div 
+                    <motion.div
                         className="contact_from mt-8 md:mt-0"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -146,7 +166,7 @@ const ContactWithMe = () => {
 
                                     {/* Submit Button */}
                                     <div>
-                                        <motion.button 
+                                        <motion.button
                                             type='submit'
                                             className='mt-5 gap-4 text-lg font-semibold uppercase 
                                                 bg-[#0788FF] py-3 w-full rounded-full

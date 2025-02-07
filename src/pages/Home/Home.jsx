@@ -105,7 +105,7 @@ const Home = () => {
     <div>
       {/* Navigation Menu */}
       <section className='w-full bg-gradient-to-r from-[#2f3d49] to-[#0d1e2e] sticky top-0 z-20  '>
-        <div className="navbar max-w-6xl mx-auto">
+        <div className="navbar container mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
               <div

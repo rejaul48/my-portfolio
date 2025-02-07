@@ -56,7 +56,7 @@ const Header = () => {
         <>
 
             <section className='w-full bg-blue-500 bg-opacity-45'>
-                <div className="navbar max-w-6xl mx-auto">
+                <div className="navbar container mx-auto">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

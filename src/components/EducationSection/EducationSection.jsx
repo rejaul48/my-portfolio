@@ -13,7 +13,7 @@ const EducationSection = () => {
 
     return (
         <section className="py-12 bg-gray-50">
-            <div className="max-w-6xl mx-auto">
+            <div className="container mx-auto">
                 <div className="flex gap-12">
 
                     <div className="w-full   ">

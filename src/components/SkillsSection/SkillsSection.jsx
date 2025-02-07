@@ -3,10 +3,12 @@ import React, { useEffect, useState, useRef } from 'react';
 import skillsImg from '../../assets/giphy.webp';
 import { FaBootstrap, FaCode, FaCss3, FaDatabase, FaHtml5, FaJs, FaNode, FaPython, FaReact, FaTablet } from 'react-icons/fa';
 import { motion, useInView } from 'framer-motion';
+import { RiNextjsLine } from "react-icons/ri";
+import { IoLogoFirebase } from "react-icons/io5";
 
 const SkillProgressBar = ({ skill, level, inView }) => {
     const [progress, setProgress] = useState(0);
-    
+
     // Dynamically update the progress when the section comes into view
     useEffect(() => {
         if (inView) {
@@ -56,7 +58,7 @@ const SkillsSection = () => {
     return (
         <>
             <section className="py-20 overflow-hidden">
-                <div className="max-w-6xl mx-auto">
+                <div className="container mx-auto">
                     <div className="pb-9">
                         <h2 className="text-center text-4xl font-bold text-white">
                             MY SK<span className="text-blue-400 border-b-4">ILLS</span>
@@ -108,12 +110,13 @@ const SkillsSection = () => {
                                 <div className="md:flex items-center gap-12 w-full">
                                     <div className="flex items-center gap-3 w-full">
                                         <FaNode className="text-4xl text-blue-500 text-opacity-80" />
-                                        <SkillProgressBar skill="Node.js" level={90} inView={isProgressInView} />
+                                        <SkillProgressBar skill="Node.js" level={80} inView={isProgressInView} />
                                     </div>
                                     <div className="flex items-center gap-3 w-full">
-                                        <FaDatabase className="text-4xl text-blue-500 text-opacity-80" />
-                                        <SkillProgressBar skill="MongoDB" level={50} inView={isProgressInView} />
+                                        <FaPython className="text-4xl text-blue-500 text-opacity-80" />
+                                        <SkillProgressBar skill="Python" level={40} inView={isProgressInView} />
                                     </div>
+
                                 </div>
                                 <div className="md:flex items-center gap-12 w-full">
                                     <div className="flex items-center gap-3 w-full">
@@ -121,10 +124,24 @@ const SkillsSection = () => {
                                         <SkillProgressBar skill="Express JS" level={50} inView={isProgressInView} />
                                     </div>
                                     <div className="flex items-center gap-3 w-full">
-                                        <FaPython className="text-4xl text-blue-500 text-opacity-80" />
-                                        <SkillProgressBar skill="Python" level={60} inView={isProgressInView} />
+                                        <FaDatabase className="text-4xl text-blue-500 text-opacity-80" />
+                                        <SkillProgressBar skill="MongoDB" level={50} inView={isProgressInView} />
                                     </div>
                                 </div>
+
+                                {/* firabase and next.js */}
+
+                                <div className="md:flex items-center gap-12 w-full">
+                                    <div className="flex items-center gap-3 w-full">
+                                        <RiNextjsLine className="text-4xl text-blue-500 text-opacity-80"/>
+                                        <SkillProgressBar skill="Next JS" level={40} inView={isProgressInView} />
+                                    </div>
+                                    <div className="flex items-center gap-3 w-full">
+                                        <IoLogoFirebase className="text-4xl text-blue-500 text-opacity-80" />
+                                        <SkillProgressBar skill="Firebase" level={70} inView={isProgressInView} />
+                                    </div>
+                                </div>
+
                             </div>
                         </motion.div>
 
@@ -134,9 +151,9 @@ const SkillsSection = () => {
                             initial={{ opacity: 0, x: 100 }}
                             animate={isImageInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
                             transition={{ duration: 0.8, ease: 'easeOut' }}
-                            className="md:w-5/12 flex items-center justify-center bg-white p-4 rounded-xl md:mr-3 overflow-hidden"
+                            className="md:w-5/12 flex items-center justify-center bg-white  p-4 rounded-xl md:mr-3 overflow-hidden"
                         >
-                            <img src={skillsImg} alt="skills image" className="md:h-[450px] rounded-lg" />
+                            <img src={skillsImg} alt="skills image" className="md:h-[450px] lg:h-full rounded-lg" />
                         </motion.div>
                     </div>
                 </div>
