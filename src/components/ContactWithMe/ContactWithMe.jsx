@@ -46,7 +46,7 @@ const ContactWithMe = () => {
             transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
         >
             <div className='container mx-auto'>
-                <div className='md:flex md:gap-6 justify-between bg-[#05345C] bg-opacity-70 text-white p-6 md:p-12 rounded-xl'>
+                <div className='grid grid-cols-1 md:grid-cols-2 md:gap-6 justify-between bg-[#05345C] bg-opacity-70 text-white p-6 md:p-12 rounded-xl'>
 
                     {/* Contact Info */}
                     <motion.div

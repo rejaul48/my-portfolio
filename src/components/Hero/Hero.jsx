@@ -117,7 +117,7 @@ const Hero = () => {
                         className="md:w-5/12 dev_image_side pt-16 md:pt-12 px-12 md:px-0"
                     >
                         <img  
-                            className='scale-125 w-full h-full'
+                            className='scale-125 w-full h-full lg:pr-20'
                             src={devImg} alt="developer image"
                         />
                      

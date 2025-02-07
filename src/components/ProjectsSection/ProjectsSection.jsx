@@ -143,7 +143,7 @@ const ProjectCard = ({ project, openModal }) => {
 
     return (
         <div
-            className="relative group w-full max-w-sm h-[340px] border-2 rounded-lg shadow-md overflow-hidden flex flex-col"
+            className="relative group w-full  h-[340px] border-2 rounded-lg shadow-md overflow-hidden flex flex-col"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
